@@ -9,6 +9,7 @@ const config: ConfigTypes = {
 		ipHost: true,
 		https: false,
 		trustProxy: true,
+		ipHeader: 'CF-Connecting-IP'
 	},
 	logging: {
 		enabled: true,

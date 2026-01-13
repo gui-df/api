@@ -28,7 +28,14 @@ openssl rand -base64 48 # Troque de 48 para qualquer outro valor caso queira mai
 bun install
 ```
 
-### 4. Rode
+### 4. Dê push ao banco de dados
+
+```sh
+bun db:push
+bun db:generate
+```
+
+### 5. Rode
 ```sh
 # Dev
 bun dev

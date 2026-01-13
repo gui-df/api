@@ -8,6 +8,7 @@ const config: ConfigTypes = {
 		cluster: false,
 		ipHost: true,
 		https: false,
+		trustProxy: true,
 	},
 	logging: {
 		enabled: true,

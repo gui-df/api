@@ -26,12 +26,19 @@ model User {
 }
 
 model Bot {
-  id         BigInt  @id @default(autoincrement())
-  avatarUrl  String
-  discordId  String  @unique
-  botOwnerId String?
-  botOwner   User?    @relation(fields: [botOwnerId], references: [id], onDelete: Cascade)
-  verified   Boolean @default(false)
+  id               BigInt   @id @default(autoincrement())
+  avatarUrl        String
+  discordId        String   @unique
+  botOwnerId       String?
+  botOwner         User?    @relation(fields: [botOwnerId], references: [id], onDelete: Cascade)
+  approved         Boolean  @default(false)
+  longDescription  String
+  shortDescription String
+  websiteUrl       String?
+  sourceCode       String?
+  supportServer    String?
+  prefixes         String[]
+  tags             String[]
 }
 
 enum UserLocale {
